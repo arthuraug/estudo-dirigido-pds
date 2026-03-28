@@ -2,190 +2,182 @@
 
 ## 1. Introdução
 
-Os sinais são formas de representar fenômenos físicos ao longo do tempo. No contexto da engenharia, eles permitem descrever grandezas como temperatura, pressão, vibração e tensão elétrica. Já os sistemas são responsáveis por processar esses sinais, produzindo uma saída a partir de uma entrada.
+De acordo com Alan V. Oppenheim e Ronald W. Schafer, sinais podem ser definidos como funções que descrevem a variação de uma grandeza física em função de uma ou mais variáveis independentes, geralmente o tempo.
 
-No processamento digital de sinais, trabalha-se principalmente com sinais discretos, que são obtidos a partir da amostragem de sinais contínuos.
+No contexto do Processamento Digital de Sinais (PDS), o interesse está nos sinais em tempo discreto, que são obtidos a partir da amostragem de sinais contínuos, permitindo sua manipulação por sistemas digitais.
 
 ---
 
 ## 2. Sinais Contínuos e Discretos
 
-Um **sinal contínuo** é definido para todos os instantes de tempo, sendo representado por uma função ( x(t) ).
+Um sinal contínuo é representado por (x(t)), enquanto um sinal discreto é representado por (x[n]), sendo definido apenas em instantes discretos.
 
-Exemplo:
+Segundo Oppenheim, um sinal discreto pode ser obtido por amostragem uniforme de um sinal contínuo:
 
-* Temperatura ao longo do tempo
-* Sinal analógico de áudio
-
-Um **sinal discreto** é definido apenas em instantes específicos, geralmente obtidos por amostragem:
-
-[
+$$
 x[n] = x(nT)
-]
+$$
 
-onde ( T ) é o período de amostragem.
+onde (T) é o período de amostragem.
 
-Exemplo:
+### Interpretação Física
 
-* Leitura digital de um sensor
-* Áudio digital
+Esse processo ocorre em sistemas reais de aquisição de dados, como sensores conectados a microcontroladores, onde o sinal analógico é convertido em digital por meio de um conversor A/D.
 
 ---
 
-## 3. Sequências Elementares
+## 3. Representação por Sequências Elementares
+
+Uma ideia central apresentada por Oppenheim é que qualquer sinal discreto pode ser representado como uma combinação de impulsos deslocados:
+
+$$
+x[n] = \sum_{k=-\infty}^{\infty} x[k]\delta[n-k]
+$$
+
+Essa representação é fundamental para a análise de sistemas.
+
+---
 
 ### 3.1 Impulso Unitário
 
-O impulso discreto é definido por:
+O impulso discreto é definido como:
 
-[
+$$
 \delta[n] =
 \begin{cases}
 1, & n = 0 \
 0, & n \neq 0
 \end{cases}
-]
+$$
 
-Ele é utilizado para representar sistemas e construir outros sinais.
+Ele funciona como um “bloco básico” para construção de sinais.
 
 ---
 
 ### 3.2 Degrau Unitário
 
-O degrau unitário é definido como:
-
-[
+$$
 u[n] =
 \begin{cases}
 1, & n \geq 0 \
 0, & n < 0
 \end{cases}
-]
+$$
 
-Esse sinal representa o “ligar” de um sistema.
+Esse sinal representa uma mudança abrupta em um sistema.
 
 ---
 
-### 3.3 Exponencial Discreta
+### 3.3 Exponenciais Discretas
 
-Um sinal exponencial pode ser representado por:
+Segundo a teoria de sistemas lineares, exponenciais da forma:
 
-[
+$$
 x[n] = a^n
-]
+$$
 
-Dependendo do valor de ( a ), o sinal pode crescer ou decair ao longo do tempo.
+são soluções fundamentais para sistemas lineares invariantes no tempo (LTI).
 
 ---
 
 ## 4. Operações com Sinais
 
-### 4.1 Deslocamento no Tempo
+As operações fundamentais incluem:
 
-O deslocamento altera a posição do sinal no tempo:
+* deslocamento: (x[n-k])
+* inversão: (x[-n])
+* escalonamento: (a \cdot x[n])
 
-* ( x[n - k] ): atraso
-* ( x[n + k] ): avanço
-
----
-
-### 4.2 Inversão Temporal
-
-Consiste em inverter o sinal no tempo:
-
-[
-x[-n]
-]
-
----
-
-### 4.3 Escalonamento
-
-Multiplica o sinal por uma constante:
-
-[
-y[n] = a \cdot x[n]
-]
+Essas operações permitem modelar atrasos, simetrias e amplificações em sistemas físicos.
 
 ---
 
 ## 5. Energia e Potência
 
-A energia de um sinal discreto é dada por:
+A energia de um sinal discreto é definida por:
 
-[
+$$
 E = \sum_{n=-\infty}^{\infty} |x[n]|^2
-]
+$$
 
 A potência média é:
 
-[
+$$
 P = \lim_{N \to \infty} \frac{1}{2N+1} \sum_{n=-N}^{N} |x[n]|^2
-]
+$$
 
-* Sinais com energia finita são chamados de **sinais de energia**
-* Sinais com potência finita são chamados de **sinais de potência**
+Segundo Proakis, essa classificação é essencial para determinar o tipo de processamento adequado ao sinal.
 
 ---
 
 ## 6. Sistemas Discretos
 
-Um sistema discreto transforma um sinal de entrada ( x[n] ) em uma saída ( y[n] ).
-
-### 6.1 Sistemas com e sem memória
-
-* **Sem memória**: saída depende apenas de ( x[n] )
-* **Com memória**: depende de valores passados ou futuros
+Um sistema discreto é uma transformação que mapeia um sinal de entrada (x[n]) em um sinal de saída (y[n]).
 
 ---
 
-### 6.2 Linearidade
+### 6.1 Sistemas Lineares e Invariantes no Tempo (LTI)
 
-Um sistema é linear se satisfaz:
+De acordo com Oppenheim, sistemas LTI são particularmente importantes porque podem ser completamente caracterizados por sua resposta ao impulso.
 
-* Princípio da superposição
-* Homogeneidade
+---
+
+### 6.2 Memória
+
+* Sem memória: saída depende apenas de (x[n])
+* Com memória: depende de (x[n-k])
 
 ---
 
 ### 6.3 Causalidade
 
-* **Causal**: depende apenas do presente ou passado
-* **Não causal**: depende do futuro
+Um sistema é causal se:
+
+$$
+y[n] \text{ depende apenas de } x[k], \quad k \leq n
+$$
+
+Essa propriedade é essencial para implementação física.
 
 ---
 
-### 6.4 Invariância no Tempo
+### 6.4 Estabilidade BIBO
 
-Um sistema é invariante no tempo se seu comportamento não muda ao longo do tempo.
-
----
-
-### 6.5 Estabilidade (BIBO)
-
-Um sistema é estável se toda entrada limitada produz uma saída limitada.
+Um sistema é BIBO estável se toda entrada limitada gera saída limitada.
 
 ---
 
-### 6.6 Invertibilidade
+### 6.5 Invariância no Tempo
 
-Um sistema é invertível se é possível recuperar a entrada a partir da saída.
-
----
-
-## 7. Aplicações em Engenharia
-
-Os conceitos de sinais e sistemas discretos são amplamente aplicados em:
-
-* Monitoramento de vibração em máquinas
-* Sensores de temperatura em processos industriais
-* Sistemas digitais embarcados
-* Processamento de sinais elétricos
-* Controle de velocidade de motores
+Se uma entrada deslocada gera uma saída igualmente deslocada, o sistema é invariante no tempo.
 
 ---
 
-## 8. Conclusão
+## 7. Aplicações Tecnológicas
 
-A modelagem de sinais discretos permite representar matematicamente fenômenos reais, possibilitando seu processamento em sistemas digitais. A análise das propriedades dos sistemas é essencial para garantir funcionamento correto, previsível e estável, sendo fundamental em diversas aplicações da engenharia.
+Os conceitos apresentados são aplicados em diversas áreas:
 
+* monitoramento de vibração em máquinas;
+* sensores térmicos industriais;
+* processamento de sinais biomédicos;
+* sistemas embarcados;
+* telecomunicações digitais.
+
+---
+
+## 8. Conexão com o Problema Norteador
+
+A modelagem de sinais discretos permite representar matematicamente sinais provenientes de sensores reais.
+
+Para garantir o processamento correto, é necessário analisar propriedades como:
+
+* causalidade (implementação física);
+* estabilidade (robustez do sistema);
+* linearidade (facilidade de análise);
+* invariância no tempo (consistência).
+
+---
+
+## 9. Conclusão
+
+Com base nos fundamentos apresentados por Oppenheim, a análise de sinais e sistemas discretos constitui a base para o desenvolvimento de algoritmos de processamento digital, sendo essencial em aplicações modernas de engenharia.
