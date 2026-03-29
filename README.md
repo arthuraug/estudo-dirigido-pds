@@ -91,6 +91,6 @@ Modelar sinais discretos, analisar sistemas digitais e relacionar conceitos teó
 
 ---
 
-## 👨‍💻 Autor
+##  Autor
 
 Arthur Augusto de Oliveira Medeiros
