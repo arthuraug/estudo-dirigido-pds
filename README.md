@@ -1,6 +1,6 @@
-# 📡 Estudo Dirigido – Processamento Digital de Sinais (PDS)
+#  Estudo Dirigido – Processamento Digital de Sinais (PDS)
 
-## 📌 Descrição
+##  Descrição
 
 Este repositório contém o desenvolvimento da Parte 1 do estudo dirigido da disciplina de Processamento Digital de Sinais (PDS), abordando a modelagem de sinais discretos e a análise de sistemas.
 
@@ -8,7 +8,7 @@ O projeto integra fundamentos teóricos, simulações computacionais em Python e
 
 ---
 
-## 🧠 Conteúdos abordados
+##  Conteúdos abordados
 
 * Sinais discretos (impulso, degrau, exponencial)
 * Operações com sinais (deslocamento)
@@ -23,7 +23,7 @@ O projeto integra fundamentos teóricos, simulações computacionais em Python e
 
 ---
 
-## 💻 Simulações
+##  Simulações
 
 As simulações foram implementadas em Python utilizando as bibliotecas:
 
@@ -40,7 +40,7 @@ Os seguintes sinais e sistemas foram analisados:
 
 ---
 
-## 📊 Resultados
+##  Resultados
 
 Os gráficos gerados estão disponíveis na pasta:
 
@@ -56,7 +56,7 @@ A análise dos resultados pode ser encontrada em:
 
 ---
 
-## ⚙️ Como executar o projeto
+##  Como executar o projeto
 
 ### 1. Clonar o repositório
 
@@ -85,7 +85,7 @@ python simulacoes/sinais.py
 
 ---
 
-## 🎯 Objetivo
+##  Objetivo
 
 Modelar sinais discretos, analisar sistemas digitais e relacionar conceitos teóricos com aplicações práticas em engenharia.
 
