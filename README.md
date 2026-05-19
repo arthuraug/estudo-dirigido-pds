@@ -1,96 +1,89 @@
-#  Estudo Dirigido – Processamento Digital de Sinais (PDS)
+# Estudo Dirigido – Processamento Digital de Sinais (PDS)
 
-##  Descrição
+## 📌 Descrição
 
-Este repositório contém o desenvolvimento da Parte 1 do estudo dirigido da disciplina de Processamento Digital de Sinais (PDS), abordando a modelagem de sinais discretos e a análise de sistemas.
+Este repositório contém o desenvolvimento do estudo dirigido da disciplina de Processamento Digital de Sinais (PDS), organizado em etapas progressivas:
 
-O projeto integra fundamentos teóricos, simulações computacionais em Python e interpretação de resultados.
+- Parte 1: Análise de sinais discretos e sistemas
+- Parte 3: Análise no domínio da frequência
 
----
-
-##  Conteúdos abordados
-
-* Sinais discretos (impulso, degrau, exponencial)
-* Operações com sinais (deslocamento)
-* Sistemas discretos
-* Classificação de sistemas:
-
-  * memória
-  * linearidade
-  * causalidade
-  * estabilidade
-  * invariância no tempo
+O projeto integra fundamentos teóricos, simulações computacionais e interpretação de resultados.
 
 ---
 
-##  Simulações
+## 📁 Estrutura do repositório
+parte1/ → sinais discretos e sistemas (Python)
+parte3/ → análise espectral (Octave/MATLAB)
+---
 
-As simulações foram implementadas em Python utilizando as bibliotecas:
+## 📊 Parte 1 – Sinais e Sistemas
 
-* NumPy
-* Matplotlib
+Nesta etapa são estudados conceitos fundamentais de sinais discretos e sistemas lineares invariantes no tempo (LTI).
 
-Os seguintes sinais e sistemas foram analisados:
+### Conteúdos abordados
+- Sinais discretos (impulso, degrau, exponencial)
+- Operações com sinais (deslocamento no tempo)
+- Sistemas discretos
+- Propriedades de sistemas:
+  - Memória
+  - Linearidade
+  - Causalidade
+  - Estabilidade
+  - Invariância no tempo
 
-* Impulso unitário
-* Degrau unitário
-* Sinal exponencial
-* Deslocamento no tempo
-* Sistema: y[n] = x[n] + x[n-1]
+### Ferramentas utilizadas
+- Python
+- NumPy
+- Matplotlib
+
+### Resultados
+Os gráficos e análises estão disponíveis em:
+/parte1/resultados
+
 
 ---
 
-##  Resultados
+## 📊 Parte 3 – Análise no Domínio da Frequência
 
-Os gráficos gerados estão disponíveis na pasta:
+Nesta etapa são explorados conceitos de análise espectral de sinais discretos.
 
-```bash
-/resultados
-```
+### Conteúdos abordados
+- Transformada de Fourier em Tempo Discreto (DTFT)
+- Transformada Discreta de Fourier (DFT)
+- FFT (Fast Fourier Transform)
+- Transformada-Z (no contexto teórico)
+- Aliasing
+- Janelamento
+- Resposta em frequência de sistemas
 
-A análise dos resultados pode ser encontrada em:
+### Aplicações
+- Análise de sinais de sensores
+- Processamento de áudio
+- Sistemas de comunicação
+- Diagnóstico de vibrações e falhas
 
-```bash
-/resultados/analise.md
-```
+### Ferramentas utilizadas
+- GNU Octave / MATLAB
+
+### Resultados
+Os gráficos e análises estão disponíveis em:
+/parte3/resultados
+
 
 ---
 
-##  Como executar o projeto
+## 🚀 Como executar
 
-### 1. Clonar o repositório
-
-```bash
-git clone https://github.com/arthuraug/estudo-dirigido-pds.git
-```
-
-### 2. Criar e ativar ambiente virtual
-
-```bash
-python -m venv venv
-source venv/Scripts/activate
-```
-
-### 3. Instalar dependências
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Executar as simulações
-
+### Parte 1 (Python)
 ```bash
 python simulacoes/sinais.py
-```
 
----
+run('parte3/simulacoes/q1_fft.m')
 
-##  Objetivo
+🎯 Objetivo do projeto
 
-Modelar sinais discretos, analisar sistemas digitais e relacionar conceitos teóricos com aplicações práticas em engenharia.
+Compreender o comportamento de sinais discretos e sua representação no domínio da frequência, relacionando teoria e prática em sistemas digitais.
 
----
-
-##  Autor
+👨‍🎓 Autor
 
 Arthur Augusto de Oliveira Medeiros
