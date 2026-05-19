@@ -80,10 +80,10 @@ python simulacoes/sinais.py
 
 run('parte3/simulacoes/q1_fft.m')
 
-🎯 Objetivo do projeto
+## 🎯 Objetivo do projeto
 
 Compreender o comportamento de sinais discretos e sua representação no domínio da frequência, relacionando teoria e prática em sistemas digitais.
 
-👨‍🎓 Autor
+## 👨‍🎓 Autor
 
 Arthur Augusto de Oliveira Medeiros
