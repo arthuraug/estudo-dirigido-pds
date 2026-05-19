@@ -1,5 +1,4 @@
-﻿# Resumo Parte 3
-# Resumo Teórico – Análise no Domínio da Frequência
+﻿# Resumo Teórico – Análise no Domínio da Frequência
 
 No Processamento Digital de Sinais (PDS), a análise no domínio da frequência permite identificar quais frequências estão presentes em um sinal e como elas contribuem para sua formação. Diferentemente da representação no domínio do tempo, que mostra a evolução do sinal ao longo das amostras, a representação espectral evidencia as componentes harmônicas e suas amplitudes. Essa abordagem é amplamente utilizada em telecomunicações, processamento de áudio, análise de vibrações mecânicas e sistemas embarcados.
 
@@ -16,6 +15,18 @@ Durante o processo de amostragem de sinais, pode ocorrer o fenômeno de aliasing
 Outro aspecto relevante é o janelamento. Quando um sinal finito é analisado, surgem descontinuidades nas extremidades da sequência, provocando vazamento espectral. Para reduzir esse efeito, utilizam-se funções de janela, como Hann e Hamming, que suavizam as bordas do sinal antes da aplicação da FFT. Dessa forma, o espectro obtido apresenta melhor definição das frequências presentes.
 
 Esses conceitos possuem grande importância prática em engenharia. A análise espectral é utilizada para identificar frequências dominantes em vibrações mecânicas, detectar falhas em máquinas rotativas, analisar sinais de áudio, filtrar ruídos em sensores e melhorar sistemas de comunicação digital. Assim, o estudo do domínio da frequência constitui uma ferramenta essencial para interpretação e processamento de sinais discretos.
+
+# Problema Norteador (PBL)
+
+## Resposta
+
+A análise espectral permite identificar informações relevantes sobre o comportamento dinâmico de um sistema físico ao decompor o sinal em suas componentes de frequência. A partir do espectro obtido, é possível detectar frequências dominantes, harmônicos e ruídos, que estão diretamente relacionados às características do sistema.
+
+Na prática, essa análise permite inferir propriedades como vibração mecânica, presença de falhas e padrões periódicos em sensores e sistemas físicos.
+
+Entretanto, existem limitações importantes durante a aquisição e análise dos dados. Entre elas destacam-se o aliasing, causado por taxa de amostragem insuficiente, e o vazamento espectral, decorrente do uso de sinais de duração finita. Além disso, o ruído presente em medições reais pode dificultar a identificação precisa das componentes espectrais.
+
+Portanto, a análise espectral é uma ferramenta poderosa, mas depende fortemente de boas práticas de amostragem e processamento para fornecer resultados confiáveis.
 
 ## Referências Bibliográficas
 
