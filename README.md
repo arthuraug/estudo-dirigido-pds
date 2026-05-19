@@ -75,7 +75,7 @@ Os gráficos e análises estão disponíveis em:
 ## 🚀 Como executar
 
 ### Parte 1 (Python)
-```bash
+
 python simulacoes/sinais.py
 
 run('parte3/simulacoes/q1_fft.m')
