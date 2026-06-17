@@ -1,0 +1,17 @@
+# Resumo Teórico – Filtros Digitais
+
+Os filtros digitais são sistemas utilizados para modificar seletivamente determinadas componentes de um sinal discreto. Seu principal objetivo é reduzir ruídos, eliminar interferências ou destacar informações importantes para uma determinada aplicação. Em Processamento Digital de Sinais, esses filtros podem ser representados como sistemas lineares invariantes no tempo (LTI), sendo descritos por sua resposta ao impulso e por sua resposta em frequência.
+
+Entre as principais categorias de filtros digitais destacam-se os filtros FIR (*Finite Impulse Response*) e os filtros IIR (*Infinite Impulse Response*). Os filtros FIR possuem resposta ao impulso de duração finita, pois dependem apenas das amostras atuais e passadas do sinal de entrada. Uma de suas maiores vantagens é a estabilidade inerente e a possibilidade de apresentar fase linear, preservando melhor o formato original dos sinais processados.
+
+Já os filtros IIR utilizam realimentação em sua estrutura, fazendo com que sua resposta ao impulso seja teoricamente infinita. Em comparação com os filtros FIR, normalmente conseguem atingir uma seletividade semelhante utilizando uma ordem menor, exigindo menos operações matemáticas e reduzindo o custo computacional. Entretanto, precisam ser cuidadosamente projetados para garantir estabilidade.
+
+A resposta em frequência descreve como cada componente espectral do sinal é amplificada ou atenuada pelo filtro. Por meio dessa análise é possível verificar, por exemplo, quais frequências serão preservadas em um filtro passa-baixa ou eliminadas em um filtro rejeita-faixa. Esse comportamento é essencial em aplicações como remoção de ruído, processamento de áudio e sistemas de comunicação.
+
+Além da magnitude, a resposta de fase também possui grande importância. Ela indica o deslocamento de fase introduzido pelo filtro em cada componente de frequência. Quando a fase varia linearmente com a frequência, todas as componentes sofrem atrasos proporcionais, preservando a forma temporal do sinal. Essa característica é especialmente desejável em aplicações que exigem alta fidelidade na reconstrução da informação.
+
+Outro conceito relevante é o atraso de grupo, que representa o tempo médio de atraso aplicado às diferentes componentes espectrais. Valores praticamente constantes indicam que o sinal mantém sua forma após a filtragem, enquanto grandes variações podem causar distorções temporais. Em sistemas de comunicação e transmissão de dados, controlar o atraso de grupo é fundamental para evitar degradação da informação.
+
+A estabilidade de um filtro digital está diretamente relacionada à posição de seus polos no plano-Z. Para sistemas IIR causais, todos os polos devem permanecer no interior do círculo unitário para que a resposta permaneça limitada diante de entradas limitadas. Os filtros FIR, por sua própria estrutura, são considerados estáveis por natureza.
+
+Na prática, filtros digitais estão presentes em diversas áreas da engenharia. Eles são utilizados para reduzir ruídos em sensores industriais, estabilizar medições em sistemas embarcados, melhorar a qualidade de sinais de áudio, realizar filtragem em telecomunicações, monitorar vibrações mecânicas e preparar dados para algoritmos de inteligência artificial embarcada, como aplicações de TinyML. Dessa forma, constituem uma ferramenta indispensável para o processamento e interpretação de sinais provenientes de sistemas reais.

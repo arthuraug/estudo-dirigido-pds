@@ -1,89 +1,151 @@
 # Estudo Dirigido – Processamento Digital de Sinais (PDS)
 
-## 📌 Descrição
+##  Descrição
 
-Este repositório contém o desenvolvimento do estudo dirigido da disciplina de Processamento Digital de Sinais (PDS), organizado em etapas progressivas:
+Este repositório contém o desenvolvimento do estudo dirigido da disciplina de **Processamento Digital de Sinais (PDS)**, organizado em etapas progressivas que abordam conceitos fundamentais da área por meio de fundamentação teórica, simulações computacionais e análise dos resultados obtidos.
 
-- Parte 1: Análise de sinais discretos e sistemas
-- Parte 3: Análise no domínio da frequência
+Atualmente, o projeto está dividido nas seguintes partes:
 
-O projeto integra fundamentos teóricos, simulações computacionais e interpretação de resultados.
-
----
-
-## 📁 Estrutura do repositório
-parte1/ → sinais discretos e sistemas (Python)
-parte3/ → análise espectral (Octave/MATLAB)
----
-
-## 📊 Parte 1 – Sinais e Sistemas
-
-Nesta etapa são estudados conceitos fundamentais de sinais discretos e sistemas lineares invariantes no tempo (LTI).
-
-### Conteúdos abordados
-- Sinais discretos (impulso, degrau, exponencial)
-- Operações com sinais (deslocamento no tempo)
-- Sistemas discretos
-- Propriedades de sistemas:
-  - Memória
-  - Linearidade
-  - Causalidade
-  - Estabilidade
-  - Invariância no tempo
-
-### Ferramentas utilizadas
-- Python
-- NumPy
-- Matplotlib
-
-### Resultados
-Os gráficos e análises estão disponíveis em:
-/parte1/resultados
-
+* **Parte 1:** Sinais discretos e sistemas;
+* **Parte 3:** Análise no domínio da frequência;
+* **Parte 4:** Filtros digitais.
 
 ---
 
-## 📊 Parte 3 – Análise no Domínio da Frequência
+##  Estrutura do repositório
 
-Nesta etapa são explorados conceitos de análise espectral de sinais discretos.
-
-### Conteúdos abordados
-- Transformada de Fourier em Tempo Discreto (DTFT)
-- Transformada Discreta de Fourier (DFT)
-- FFT (Fast Fourier Transform)
-- Transformada-Z (no contexto teórico)
-- Aliasing
-- Janelamento
-- Resposta em frequência de sistemas
-
-### Aplicações
-- Análise de sinais de sensores
-- Processamento de áudio
-- Sistemas de comunicação
-- Diagnóstico de vibrações e falhas
-
-### Ferramentas utilizadas
-- GNU Octave / MATLAB
-
-### Resultados
-Os gráficos e análises estão disponíveis em:
-/parte3/resultados
-
+```text
+parte1/  → Sinais discretos e sistemas (Python)
+parte3/  → Análise espectral (GNU Octave / MATLAB)
+parte4/  → Filtros digitais (Python)
+```
 
 ---
 
-## 🚀 Como executar
+#  Parte 1 – Sinais e Sistemas
 
-### Parte 1 (Python)
+Nesta etapa são estudados os conceitos fundamentais de sinais discretos e sistemas lineares invariantes no tempo (LTI).
 
-python simulacoes/sinais.py
+## Conteúdos abordados
 
+* Impulso unitário;
+* Degrau unitário;
+* Sinal exponencial;
+* Deslocamento temporal;
+* Sistemas discretos;
+* Memória;
+* Linearidade;
+* Causalidade;
+* Estabilidade;
+* Invariância no tempo.
+
+## Ferramentas utilizadas
+
+* Python;
+* NumPy;
+* Matplotlib.
+
+## Resultados
+
+Os códigos, gráficos e análises encontram-se em:
+
+```text
+parte1/
+```
+
+---
+
+#  Parte 3 – Análise no Domínio da Frequência
+
+Esta etapa aborda técnicas de representação espectral de sinais discretos.
+
+## Conteúdos abordados
+
+* Transformada Discreta de Fourier (DFT);
+* Fast Fourier Transform (FFT);
+* Transformada-Z (conceitos teóricos);
+* Aliasing;
+* Janelamento;
+* Resposta em frequência.
+
+## Ferramentas utilizadas
+
+* GNU Octave;
+* MATLAB.
+
+## Resultados
+
+Os códigos e gráficos encontram-se em:
+
+```text
+parte3/
+```
+
+---
+
+#  Parte 4 – Filtros Digitais
+
+Nesta etapa são estudados os principais conceitos relacionados ao projeto e análise de filtros digitais.
+
+## Conteúdos abordados
+
+* Filtros FIR;
+* Filtros IIR;
+* Resposta ao impulso;
+* Resposta em frequência;
+* Polos e zeros;
+* Resposta de fase;
+* Atraso de grupo;
+* Estabilidade;
+* Aplicações práticas de filtragem digital.
+
+## Ferramentas utilizadas
+
+* Python;
+* NumPy;
+* SciPy;
+* Matplotlib.
+
+## Resultados
+
+Os códigos, gráficos e análises encontram-se em:
+
+```text
+parte4/
+```
+
+---
+
+#  Como executar
+
+## Parte 1
+
+```bash
+python parte1/simulacoes/sinais.py
+```
+
+## Parte 3 (GNU Octave)
+
+```octave
 run('parte3/simulacoes/q1_fft.m')
+```
 
-## 🎯 Objetivo do projeto
+## Parte 4
 
-Compreender o comportamento de sinais discretos e sua representação no domínio da frequência, relacionando teoria e prática em sistemas digitais.
+```bash
+python parte4/simulacoes/q1.py
+```
 
-## 👨‍🎓 Autor
+As demais questões podem ser executadas substituindo `q1.py` por `q2.py`, `q3.py`, ..., `q10.py`.
+
+---
+
+#  Objetivo
+
+Desenvolver conhecimentos sobre modelagem de sinais discretos, análise espectral e filtragem digital, relacionando conceitos teóricos com aplicações práticas em engenharia por meio de simulações computacionais.
+
+---
+
+#  Autor
 
 Arthur Augusto de Oliveira Medeiros
